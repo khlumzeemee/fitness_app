@@ -54,3 +54,4 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 gem 'haml'
+gem 'haml-rails'
