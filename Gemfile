@@ -8,7 +8,7 @@ gem 'rails', '3.2.11'
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :test do
   gem 'cucumber-rails'
-  #gem 'cucumber-rails-training-wheels'
+  gem 'cucumber-rails-training-wheels'
   gem 'rspec-rails'
   gem 'simplecov'
 end
