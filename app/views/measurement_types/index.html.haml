@@ -1,0 +1,21 @@
+%h1 Listing measurement_types
+
+%table
+  %tr
+    %th Name
+    %th Unit
+    %th
+    %th
+    %th
+
+  - @measurement_types.each do |measurement_type|
+    %tr
+      %td= measurement_type.name
+      %td= measurement_type.unit
+      %td= link_to 'Show', measurement_type
+      %td= link_to 'Edit', edit_measurement_type_path(measurement_type)
+      %td= link_to 'Destroy', measurement_type, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Measurement type', new_measurement_type_path

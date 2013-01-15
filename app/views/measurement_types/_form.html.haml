@@ -1,0 +1,16 @@
+= form_for @measurement_type do |f|
+  - if @measurement_type.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@measurement_type.errors.count, "error")} prohibited this measurement_type from being saved:"
+      %ul
+        - @measurement_type.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :unit
+    = f.text_field :unit
+  .actions
+    = f.submit 'Save'
