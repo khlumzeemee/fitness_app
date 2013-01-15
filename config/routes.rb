@@ -1,4 +1,7 @@
 FitnessApp::Application.routes.draw do
+  resources :measurements
+
+
   resources :measurement_types
 
 

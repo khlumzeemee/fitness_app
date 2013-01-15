@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @measurement.user
+%p
+  %b Measurement type:
+  = @measurement.measurement_type
+
+= link_to 'Edit', edit_measurement_path(@measurement)
+\|
+= link_to 'Back', measurements_path
