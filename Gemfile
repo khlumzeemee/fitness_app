@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.1'
+gem 'rails', '3.2.11'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -14,10 +14,11 @@ group :test do
 end
 group :development, :test do
   gem 'sqlite3'
-  gem 'ruby-debug19', :require => 'ruby-debug'
+  #gem 'debugger'
   gem 'database_cleaner'
   gem 'capybara'
   gem 'launchy'
+  gem 'autotest-rails'
  
 end
 group :production do
@@ -30,7 +31,8 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   
-  gem 'therubyracer'    
+  #gem 'libv8'
+  #gem 'therubyracer'    
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
 
