@@ -7,10 +7,10 @@
           %li= msg
 
   .field
-    = f.label :user
-    = f.text_field :user
+    = f.label t(:'views.measurements.user')
+    = f.text_field :user  
   .field
-    = f.label :measurement_type
+    = f.label t(:'views.measurements.measurement_type')
     = f.text_field :measurement_type
   .actions
     = f.submit 'Save'

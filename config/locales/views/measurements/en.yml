@@ -1,0 +1,5 @@
+en:
+  views:
+    measurements:
+      user: User
+      measurement_type: Measurement Type
