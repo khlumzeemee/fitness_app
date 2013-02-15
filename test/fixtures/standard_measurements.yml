@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user: 
+  creation_date: 2013-02-15
+  weight: 9.99
+  body_fat_percentage: 9.99
+  muscle_mass: 9.99
+  water_percentage: 9.99
+  waist_line: 9.99
+
+two:
+  user: 
+  creation_date: 2013-02-15
+  weight: 9.99
+  body_fat_percentage: 9.99
+  muscle_mass: 9.99
+  water_percentage: 9.99
+  waist_line: 9.99

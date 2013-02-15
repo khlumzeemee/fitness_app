@@ -9,6 +9,6 @@ Story: add a measurement
 	
 	When I add a new measurement
 	
-	Then I should see the page for with the list of all measurements
-	And the notice 'Your measurement has been recorded successfully'
+	Then I should see the page with the list of all measurements
+	And I should see the notice 'Your measurement has been recorded successfully'
 	

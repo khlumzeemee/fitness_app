@@ -1,4 +1,7 @@
 FitnessApp::Application.routes.draw do
+  resources :standard_measurements
+
+
   resources :metrics
 
 

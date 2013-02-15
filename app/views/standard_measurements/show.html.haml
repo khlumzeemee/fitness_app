@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b User:
+  = @standard_measurement.user
+%p
+  %b Creation date:
+  = @standard_measurement.creation_date
+%p
+  %b Weight:
+  = @standard_measurement.weight
+%p
+  %b Body fat percentage:
+  = @standard_measurement.body_fat_percentage
+%p
+  %b Muscle mass:
+  = @standard_measurement.muscle_mass
+%p
+  %b Water percentage:
+  = @standard_measurement.water_percentage
+%p
+  %b Waist line:
+  = @standard_measurement.waist_line
+
+= link_to 'Edit', edit_standard_measurement_path(@standard_measurement)
+\|
+= link_to 'Back', standard_measurements_path

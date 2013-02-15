@@ -1,0 +1,31 @@
+%h1 Listing standard_measurements
+
+%table
+  %tr
+    %th User
+    %th Creation date
+    %th Weight
+    %th Body fat percentage
+    %th Muscle mass
+    %th Water percentage
+    %th Waist line
+    %th
+    %th
+    %th
+
+  - @standard_measurements.each do |standard_measurement|
+    %tr
+      %td= standard_measurement.user
+      %td= standard_measurement.creation_date
+      %td= standard_measurement.weight
+      %td= standard_measurement.body_fat_percentage
+      %td= standard_measurement.muscle_mass
+      %td= standard_measurement.water_percentage
+      %td= standard_measurement.waist_line
+      %td= link_to 'Show', standard_measurement
+      %td= link_to 'Edit', edit_standard_measurement_path(standard_measurement)
+      %td= link_to 'Destroy', standard_measurement, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Standard measurement', new_standard_measurement_path

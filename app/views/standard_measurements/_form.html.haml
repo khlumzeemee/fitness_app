@@ -1,0 +1,31 @@
+= form_for @standard_measurement do |f|
+  - if @standard_measurement.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@standard_measurement.errors.count, "error")} prohibited this standard_measurement from being saved:"
+      %ul
+        - @standard_measurement.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :user
+    = f.text_field :user
+  .field
+    = f.label :creation_date
+    = f.date_select :creation_date
+  .field
+    = f.label :weight
+    = f.text_field :weight
+  .field
+    = f.label :body_fat_percentage
+    = f.text_field :body_fat_percentage
+  .field
+    = f.label :muscle_mass
+    = f.text_field :muscle_mass
+  .field
+    = f.label :water_percentage
+    = f.text_field :water_percentage
+  .field
+    = f.label :waist_line
+    = f.text_field :waist_line
+  .actions
+    = f.submit 'Save'

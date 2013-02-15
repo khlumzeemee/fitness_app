@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130116094420) do
+ActiveRecord::Schema.define(:version => 20130215115216) do
 
   create_table "measurement_types", :force => true do |t|
     t.string   "name"
@@ -37,11 +37,26 @@ ActiveRecord::Schema.define(:version => 20130116094420) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "standard_measurements", :force => true do |t|
+    t.integer  "user_id"
+    t.date     "creation_date"
+    t.decimal  "weight",              :precision => 5, :scale => 2
+    t.decimal  "body_fat_percentage", :precision => 3, :scale => 1
+    t.decimal  "muscle_mass",         :precision => 5, :scale => 2
+    t.decimal  "water_percentage",    :precision => 3, :scale => 1
+    t.decimal  "waist_line",          :precision => 5, :scale => 2
+    t.datetime "created_at",                                        :null => false
+    t.datetime "updated_at",                                        :null => false
+  end
+
+  add_index "standard_measurements", ["user_id"], :name => "index_standard_measurements_on_user_id"
+
   create_table "users", :force => true do |t|
-    t.string   "user_name"
-    t.string   "password"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "login"
+    t.string   "hashed_password"
+    t.string   "email"
+    t.string   "salt"
+    t.datetime "created_at"
   end
 
 end
